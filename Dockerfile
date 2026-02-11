@@ -1,14 +1,25 @@
-# Base image
+# Use a supported OpenJDK 17 image
 FROM eclipse-temurin:17-jdk-jammy
 
-# Working directory
+# Set working directory
 WORKDIR /app
 
-# Copy jar into container
-COPY target/item-0.0.1-SNAPSHOT.jar app.jar
+# Copy Maven wrapper & pom.xml
+COPY mvnw .
+COPY .mvn .mvn
+COPY pom.xml .
+
+# Copy source code
+COPY src ./src
+
+# Give execute permission to mvnw
+RUN chmod +x mvnw
+
+# Build the JAR inside Docker
+RUN ./mvnw clean package -DskipTests
 
 # Expose port
 EXPOSE 8081
 
-# Run jar
-ENTRYPOINT ["java","-jar","app.jar"]
+# Run the built JAR
+ENTRYPOINT ["java","-jar","target/item-0.0.1-SNAPSHOT.jar"]
