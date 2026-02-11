@@ -2,7 +2,7 @@
 # Use a supported OpenJDK 17 image
 =======
 # Base image
->>>>>>> e52874ea666c10ae3b5d166af154a8ace0b1cf2a
+# >>>>>>> e52874ea666c10ae3b5d166af154a8ace0b1cf2a
 FROM eclipse-temurin:17-jdk-jammy
 
 # Set working directory
