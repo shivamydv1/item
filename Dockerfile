@@ -25,7 +25,7 @@ RUN ./mvnw clean package -DskipTests
 # Expose port
 EXPOSE 8081
 
-<<<<<<< HEAD
+# <<<<<<< HEAD
 # Run the built JAR
 =======
 # Run jar
