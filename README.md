@@ -40,7 +40,7 @@ API Endpoints
 1. Add Item
 
 POST /items
-https://item-2-bbgj.onrender.com/items/add
+https://item-3-hxip.onrender.com/items/add
 {
   "name": "Laptop",
   "description": "Gaming Laptop",
@@ -62,7 +62,7 @@ If validation fails:
 2.Get Item by ID
 
 GET /items/{id}
-https://item-2-bbgj.onrender.com/items/2
+https://item-3-hxip.onrender.com/items/2
 
 
 Run Locally
